@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikainan! Order Form</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: "Alan Sans", sans-serif;
+            margin: 0;
+        }
+        nav {
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #hellyeah {
+            text-align: center;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            margin: 40px auto;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #34495e;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #order-summary {
+            margin-top: 20px;
+            text-align: left;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            display: none;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ✅ Navbar Example -->
+    <nav>
+        <div style="color:white; font-weight:bold;">Mikainan!</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a> <!-- This page -->
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center;" id="sns"></h1>
+    </div>
+
+    <div class="container1 col-md" id="hellyeah">
+        <form id="order-form" action="javascript:void(0);">       
+            <h2 id="Menu"></h2>
+
+            <!-- Customer Info -->
+            <input type="text" id="cust-name" placeholder="Enter your name" required>
+            <input type="text" id="cust-address" placeholder="Enter your address" required>
+            <input type="text" id="cust-contact" placeholder="Enter your contact number" required>
+
+            <!-- Menu with prices -->
+            <input type="checkbox" id="op1" name="op1" value="130"> <label for="op1">Tapsilog (₱130)</label><br>
+            <input type="checkbox" id="op2" name="op2" value="130"> <label for="op2">Tocilog (₱130)</label><br>
+            <input type="checkbox" id="op3" name="op3" value="120"> <label for="op3">Hotsilog (₱120)</label><br>
+            <input type="checkbox" id="op4" name="op4" value="120"> <label for="op4">Bangsilog (₱120)</label><br>
+            <input type="checkbox" id="op5" name="op5" value="120"> <label for="op5">Bacsilog (₱120)</label><br><br>
+
+            <button id="generate-btn" type="button">Submit Order</button>
+        </form>
+
+        <!-- Order summary area -->
+        <div id="order-summary"></div>
+    </div>
+
+    <!-- ✅ Link to Python file -->
+    <script type="py" src="main1.py"></script>
+</body>
+</html>
