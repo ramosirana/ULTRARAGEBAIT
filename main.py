@@ -1,29 +1,29 @@
 from js import document
 
-# Basic Info
-resto_name = "Ethanol's Burger"
-owner_name = "Ethanol"
-year_established = 2025
-business_hours = "7:30 AM - 3:30 PM"
+# resto info
+restname = "Mikainan!"
+owname = "miggy"
+yestablished = 2025
+bours = "6:07 AM - 6:07 PM"
 has_delivery = True
 
-# Menu
+# menu
 menu_prices = {
-    "Big Boy": 120.20,
-    "OG Burger": 95.50,
-    "Sheer Heart Attack": 150.75,
-    "Double Trouble": 135.00,
-    "Cheesy Melt": 110.00
+    "The Miggy Tapsi": 130.00,
+    "The Miggy Toci": 130.00,
+    "The Miggy Hotsi": 120.00,
+    "The Miggy Spamsi": 120.00,
+    "The Miggy Bangsi": 120.00
 }
 
-# Fill Header
-document.getElementById("restoName").innerText = resto_name
-document.getElementById("ownerName").innerText = f"Owner: {owner_name}"
-document.getElementById("yearEstablished").innerText = f"Since {year_established}"
-document.getElementById("business_hours").innerText = business_hours
-document.getElementById("delivery_btn").innerText = "🚚 Delivery Available" if has_delivery else "❌ No Delivery"
+# header
+document.getElementById("restoName").innerText = restname
+document.getElementById("ownerName").innerText = f"Owner: {owname}"
+document.getElementById("yearEstablished").innerText = f"Since {yestablished}"
+document.getElementById("business_hours").innerText = bours
+document.getElementById("delivery_btn").innerText = "We can deliver!" if has_delivery else "We can't deliver!"
 
-# Fill Menu Table
+# menu table
 menu_table = document.getElementById("menu_items")
 for product, price in menu_prices.items():
     row_html = f"<tr><td>{product}</td><td>₱{price:.2f}</td></tr>"
