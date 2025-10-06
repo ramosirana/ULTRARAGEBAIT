@@ -58,7 +58,7 @@
       }
 
       .menu-box h4 {
-         color: #7b3e04;
+         color: black;
          font-weight: bold;
       }
 
@@ -78,14 +78,6 @@
          transform: scale(1.05);
       }
 
-      footer {
-         background: #2c3e50;
-         color: white;
-         text-align: center;
-         padding: 10px;
-         margin-top: 40px;
-         border-radius: 8px;
-      }
    </style>
 </head>
 <body>
@@ -94,8 +86,7 @@
         <div style="color:white; font-weight:bold;">Mikainan!</div>
         <div>
             <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="order.html">Order</a> <!-- This page -->
+            <a href="order.html">Order</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
@@ -103,7 +94,7 @@
    <!-- Content -->
    <div class="container">
       <div class="header-box">
-         <h1 id="restoName">🍔😋</h1>
+         <h1 id="restoName"></h1>
          <p id="ownerName"></p>
          <p id="yearEstablished"></p>
       </div>
@@ -122,14 +113,10 @@
       </div>
 
       <div class="text-center">
-         <button id="delivery_btn" class="order-btn"></button>
+        <button id="delivery_btn" class="order-btn"></button>
          <p class="mt-3">Open: <span id="business_hours"></span></p>
       </div>
    </div>
-
-   <footer>
-      Dine-in & Takeout Available
-   </footer>
 
    <py-config>
       [[fetch]]
